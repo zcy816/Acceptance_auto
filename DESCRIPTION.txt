@@ -1,0 +1,24 @@
+# 项目模块介绍
+
+# common  -- 主要是放了封装了一些通用的方法
+    # base_case.py  测试用例基类，执行用户的时候，会根据setup_class 和 teardown_class去优先执行
+    # excel_handler.py  读取Excel文件中的数据转换成测试用例数据
+    # log_handler.py    封装的log日志方法
+    # tools.py  封装的系统级别的操作方法，原本是在main文件上加了一些判断方法，目前暂时没有使用了
+# logs -- 生成日志存放目录，运行用例之后会自动生成
+# page_objects -- 封装的APP页面级对象的通用方法
+    # base_page.py     封装了一些APP元素定位、操作、等待、截图等方法
+    # login_page.py    封装的登录模块相关的操作方法
+    # my_page.py    APP我的页面中的一些通用方法
+    # navigation_page.py    导航栏相关操作方法封装
+# result -- 测试报告存放目录，运行用例之后会自动生成
+# screenshot -- 截图存放目录，运行用例之后，涉及相关截图操作会自动生成
+# test_data -- 测试数据存放目录
+    # cases.xlsx    存放测试数据的Excel文件
+# testcases -- 测试用例存放目录
+    # conftest.py   pytest模块的夹具，用于共享配置、自定义fixture(夹具)、支持定义全局配置参数
+    # test_login.py     test_ 测试用例固定开头名称，测试登录模块的用例
+# main.py   程序运行的入口
+# pytest.ini    用于定义配置pytest 装饰器，执行用例的时候可以指定执行特定被标记的用例如： pytest -m sucess -s -q --alluredir... 只运行标记为sucess的用例
+# requirements.txt   当前项目需要依赖的库
+# settings.py   项目通用的配置抽离（方便管理），如：测试数据路径、测试用例路径、日志配置、全局默认等待时间、错误截图目录、appium相关配置、driver配置
