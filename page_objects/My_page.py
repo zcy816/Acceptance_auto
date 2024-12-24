@@ -17,7 +17,7 @@ class MyPage(AppBasePage):
     login_page_loc = (MobileBy.XPATH, '//android.widget.TextView[@text="未登录"]')
 
     # 进入设置页面的按钮
-    settings_btn_loc = (MobileBy.ID, 'com.smwl.x7market:id/set_ll')
+    settings_btn_loc = (MobileBy.ID, 'com.smwl.x7market.internation1:id/set_ll')
 
     # nickname 定位
     nick_name_loc = (MobileBy.ID, 'com.smwl.x7market:id/user_name_tv')

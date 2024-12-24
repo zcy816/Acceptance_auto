@@ -9,6 +9,7 @@ import pytest
 import settings
 from appium import webdriver
 from page_objects.navigation_page import NavigationPage
+from page_objects.update_page import UpdatePage
 from page_objects.login_page import LoginPage
 from page_objects.My_page import MyPage
 from page_objects.Game_page import GamePage
@@ -103,6 +104,19 @@ def to_settings_page(driver):
     mp.enter_settings_page()
     yield driver
 
+@pytest.fixture(scope='class')
+def to_settings_page_acctptance(driver):
+    """
+    进入到设置页面
+    :param driver:
+    :return:
+    """
+    # 1、进入个人中心页面
+    np = UpdatePage(driver)
+    np.go_mypage()
+    # 2、进入设置页面
+    np.go_setting()
+    yield driver
 
 @pytest.fixture(scope='class')
 def to_message_page(driver):

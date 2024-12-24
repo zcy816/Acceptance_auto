@@ -48,8 +48,8 @@ DESIRED_CAPS = {
     # MuMu模拟器
     # "platformVersion": "12",
     # "deviceName": "127.0.0.1:16384",
-    "appPackage": "com.smwl.x7market",
-    "appActivity": "com.smwl.x7market.activity.SplashActivity",
+    "appPackage": "com.smwl.x7market.internation1",
+    "appActivity": "com.smwl.x7market.activity.MainActivity",
     "automationName": "Uiautomator2",
     "noReset": True,
     "appium:skipServerInstallation": True,
